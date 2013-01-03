@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'HarmoniaS';
-  src: url('/static/fonts/HarmoniaSansStd-Regular.otf');
+  src: url('fonts/HarmoniaSansStd-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HarmoniaB';
-  src: url('/static/fonts/HarmoniaSansStd-Bold.otf');
+  src: url('fonts/HarmoniaSansStd-Bold.otf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'HarmoniaI';
-  src: url('/static/fonts/HarmoniaSansStd-Italic.otf');
+  src: url('fonts/HarmoniaSansStd-Italic.otf');
   font-weight: normal;
   font-style: italic;
 }
@@ -221,7 +221,7 @@ body {
 }
 
 .content {
-  background: white url(/static/images/header-gradient.png) repeat-x top left;
+  background: white url(images/header-gradient.png) repeat-x top left;
   padding-top: 40px; 
 }
 
@@ -373,7 +373,7 @@ div#player a{
 .social a{
   display: block;
   height: 37px;
-  background-image: url(/static/images/icons/social-media-icons-full.png);
+  background-image: url(images/icons/social-media-icons-full.png);
   background-repeat: no-repeat;
   text-indent: -9999px;
   margin: 2px 6px 4px 2px;
