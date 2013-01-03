@@ -1,0 +1,580 @@
+/*  Global styles  */
+body,html,h1,h2,h3,h4,p,li,label,div,form,input{margin:0px;padding:0;font-family: arial, verdana, sans-serif;}
+a:visited, a:link{text-decoration: none;}
+.content{width: 1280px;}
+.main_view{width: 1280px;margin: 0 auto;padding: 0 10px;}
+
+/* Text Styles */
+h3{font-size: 40px;margin: 10px 0;}
+h3.error{color: red;font-weight: bold;}
+.errormessage {
+	background: #fffaf5;
+	background: -moz-linear-gradient(top, #fffaf5 0%, #f4dad0);
+	background: -webkit-gradient(linear, left top, left bottom, from(#fffaf5), to(#f4dad0));
+	border: 1px solid #f57232;
+	color: #95311a;
+	border-radius: 4px;
+	padding: 5px 10px;
+	margin: 3px 3px 13px 3px; 
+}
+
+span{color: #197BBE;}
+span.small{color:inherit;}
+span.red{color: red;float: left;}
+
+p span.small{color: white;font-size: 11px;}
+
+.nooutline p{width: 300px;text-align: center;}
+
+.blue{color: #197BBE;}
+.left{float: left !important;}
+.right{float: right !important;}
+
+label.small_label{font-size: 12px;}
+
+.page_label input[type="text"]{
+	border:none;
+	border-bottom: 1px solid black;
+	width: 65px;
+	height: 20px;
+	font-size: 12px;
+}
+
+input[type=checkbox]{height: 20px;}
+input[type=radio]{margin:10px 0 0 20px;}
+
+.formtext ul{list-style-type:none;position: absolute;top:0;right:0;bottom:0;left:0;}
+.formtext ul li{float: left;}
+
+/*  Work Order Structure  */
+.work_order_step{width: 1260px;height: 300px;}
+.work_order_step.small{height: 250px;}
+.work_order_step.sbux_step{height: 150px;}
+.work_order_step#parts, .work_order_step#labor{height: auto;}
+
+/*Formrow Styling*/
+.formrow {height: 45px;}
+.formrow.sig{height: 82px;}
+.formrow.formrowsmall{height: 30px;}
+.formrow.formrowsmall label{font-size: 14px;}
+.formrow.lastRow{width: 1257px;}
+.formrow.lastRowLabor{width:1252px;}
+.formrow.hidden{display: none;}
+/*  Formbox Styles  */
+.formbox.header{
+	background-color: black;
+	border-color: white;
+	padding: 8px 0 2px;
+	height: 34px;
+}
+.formbox.header:last-child{
+	border-right-color:black;
+}
+
+.formbox.header p{
+	text-align: center;
+	color: white;
+}
+
+.formbox label { 
+	position: absolute; 
+	padding: 2px 3px; 
+	font-size: 12px; 
+	color: #555555; 
+} 
+
+.formbox.formboxserviceperformed textarea{padding: 30px 10px;}
+
+.formbox input[type=checkbox], input[type=checkbox], input[type=radio]{cursor:pointer;}
+.formbox input, .formbox textarea{padding: 14px 5px 2px 5px; cursor: text; }
+.formbox.formboxcheck input[type=checkbox]{top: 15px;left: 5px;}
+textarea{resize: none;}
+
+.formtext p{
+	padding: 5px 0 0 10px;
+	font-size: 12px;
+}
+
+.formbox input, .formbox textarea, .formbox img, .work_order_number input{ 
+	position: absolute; 
+	display: block; 
+	top: 0; left: 0; bottom: 0; right: 0; 
+	border: 0; 
+	background: transparent none; 
+	margin: 0; 
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 20px; 
+} 
+
+.formbox.formboxdate input{
+	font-size:16px;
+}
+
+.formbox input:focus, .formbox textarea:focus { 
+	outline: 0; 
+	background: rgba(255,255,0,.15);
+	cursor: text; 
+} 
+
+.formtext.formboxmedium label{
+	float: left;
+	width: 60px;
+	padding: 2px 3px; 
+	font-size: 12px; 
+	color: #555555; 
+}
+
+.formbox.blue{
+	background: #BCE2ED;
+}
+
+.formbox.formboxcity.nooutline{
+	border: none;
+}
+
+.formboxqty p{
+	font-size: 12px;
+}
+
+/*  End Global Styles  */
+
+
+/*  Global formbox sizes in order of size */
+/* Default: 620px */
+.formbox, .formtext { 
+	width: 620px; 
+	height: 44px; 
+	border: 1px solid black; 
+	margin: 0 -1px -1px 0; 
+	position: relative; 
+	cursor: text;
+}
+/* 1255px */.formbox.formboxserviceperformed{width: 1255px;height: 175px;}
+/* 1255px */.formtext.formboxserviceinfo{width: 1255px;height: 29px;}
+/* 952px */	.formbox.formboxlong, .formtext.formboxlong{width: 952px;float: left;}
+/* 410px */	.formboxcityheading{width: 410px;float: left;}
+/* 300px */	.formbox.formboxsig{width: 300px;float:left;height: 80px;}
+/* 400px */	.formbox.formboxcity{width: 400px; float: left;} 
+/* 310px */	.formbox.formboxhalf{width: 310px;float: left;}
+/* 309px */	.formbox.formboxhalf:first-child{width: 309px;}
+/* 259px */	.formbox.formboxmedium, .formtext.formboxmedium{width: 259px;float: left;}
+/* 138px */	.formbox.formboxzip{width: 138px; float: left;} 
+/* 123px */	.formbox.formboxsmall, .formtext.formboxsmall{width: 123px;float: left;}
+/* 99px */	.formbox.formboxdate{width: 99px;height: 80px;float: left;}
+/* 100px */	.formbox.formboxtiny{width: 100px;float: left;}
+/* 80px */	.formbox.formboxstate{width: 80px; float: left;}
+/* 50px */	.formbox.formboxamp{border:none;width: 50px;float: left;}
+/* 47px */	.formbox.formboxqty{width: 47px;float: left;}
+/* 25px */	.formbox.formboxcheck{width: 25px;float: left;}
+
+
+/*  Div specific formbox styles  */
+/*  SBUX Styles  */
+.sbux{width:300px;float: left;margin: 0 50px;}
+
+/*  Work Order Number Styles  */
+.work_order_number_container{
+	float: left;
+	margin: 50px 0 0 0;
+	width: 350px;
+	height: 70px;
+	border: 1px solid black;
+	text-align: center;
+}
+.work_order_number{
+	position: relative;
+	margin: 10px auto 0 auto;
+	width: 330px;
+	height: 35px;
+	border: 1px solid black;
+}
+.work_order_number input{padding: 8px 5px;}
+
+/*  Customer Information Styles  */
+.customer_information{
+	float:left;
+	margin-right: 5px;
+	width: 625px;
+}
+
+/*  Equipment Information Styles  */
+.equipment_information{
+	float:left;
+	margin-left: 5px;
+	width: 625px;
+}
+
+.smartcare{
+	float: left;
+	margin: 0 10px;
+}
+
+
+/*  Service Information Styles  */
+.service_information{width: 1256px;}
+.service_information label.red{color: red;}
+
+.formbox.formboxserviceperformed h3{
+	position: absolute;
+	display: block;
+	background: black;
+	color: white;
+	font-size: 18px;
+	padding: 2px 5px;
+	top:-10px;
+}
+
+.formbox.formboxserviceperformed h3.red{
+	background: red;
+	left: 168px;
+}
+
+/*  Parts Information Styles  */
+.parts_information .formbox.formboxmedium{width: 243px;}
+.parts_information .formbox textarea{padding: 5px 5px 2px;}
+
+.formbox.totalparts{float: right;}
+
+.partButton{
+	position: absolute;
+	right: 0;
+	top:0;
+	bottom: 0;
+	left: auto;
+	cursor: pointer;
+	z-index: 1;
+	font-size: 14px;
+}
+
+
+.parts_information .formrow .formbox:last-child{width: 103px;}
+.partArrow{position: absolute;right: 1px;cursor: pointer;}
+/* Part Arrow */#up{top: 1px;}
+/* Part Arrow */#down{bottom: 1px;}
+
+/*  Labor Information Styles  */
+.labor_information{width: 1266px;}
+.labor_information .formtext label{font-size: 10px;}
+.labor_information .formtext.formboxsmall{
+	height: 24px;
+	width: 110px;
+	padding: 10px 9px;
+}
+.labor_information .formbox.formboxsmall{
+	width: 128px;
+}
+.labor_information .formbox.totallabor{
+	float: right;
+}
+
+/* Truck Stock Lights */
+.greenLight, .redLight{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	left: auto;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	font-size: 16px;
+}
+.greenLight{box-shadow: 0 0 3px 4px rgba(101,196,78, .3);background: #65C44E;}
+.redLight{box-shadow: 0 0 3px 4px rgba(193,77,77, .3);background: #C14D4D;}
+
+/*  Warranty Styles  */
+.warranty_information_container{
+	border: 1px solid black;
+	width: 750px;
+	height: 150px;
+	padding: 10px;
+	float: left;
+}
+.warranty_information_container p, label{font-size: 14px;}
+.warranty_information{width: 800px;float: left;}
+
+.warrantyformbox{
+	width: 250px;
+	height: 40px;
+	float: left;
+}
+
+/*  Estimate Styles  */
+.estimate{
+	width: 450px;
+	color: red;
+	float: right;
+}
+.estimate label{font-size: 12px;}
+.estimate input[type="checkbox"]{height: auto;}
+.estimate .formbox{color: red;border-color: red;}
+.estimate .formbox label{color: red;}
+.estimate .formbox{width: 200px;}
+.estimate .formboxsig{width: 300px;}
+.estimate .formbox.formboxdate{width: 100px;}
+
+.estimate_disclaimer{
+	color: red;
+	height: 40px;
+	width: 700px;
+	font-size: 12px;
+	float: right;
+}
+
+/*  Signature Styles  */
+.form_heading_step{height: 20px;width: 1200px;}
+.signatures .formbox.bump{margin-right: 10px;}
+
+/* Signature Overlay */
+.signature { 
+	position: relative;
+	width: 620px;  
+	background: white; 
+	text-align: left;
+	box-shadow: 2px 2px 3px 2px rgba(0,0,0,.3);
+	border-radius: 12px 12px 0 0;
+}
+.signature .partContent{
+	padding: 10px;
+}
+.signature .siglabel {
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 6px;
+	font-size: 24px;
+	color: #888888;
+}
+.signature button { 
+	font-family: Helvetica, Arial, sans-serif; 
+	font-size: 20px; 
+} 
+.signature div { position: relative; } 
+.signature canvas { border: 1px solid #888888; cursor:crosshair; z-index:1000} 
+
+/*  Footer styles  */
+.footer{
+	margin: 0 auto;
+	height: 64px;
+	background: #027CBA;
+	position:fixed;
+	left: 0; right: 0; bottom: 0;
+	z-index: 100;
+}
+
+.footer_button{
+	cursor:pointer;
+	border:none;
+	text-align:center;
+	width: 320px;
+	height: 64px;
+	color: white;
+	background: #027CBA;
+	position: absolute;
+	font-size: 40px;
+	z-index: 8;
+}
+.footer_button:hover{background: #229CDA;}
+.footer_button:active{color: #027CBA;background: #ffffff;}
+.footer_button.left{left:0;bottom:0;	border-right: 1px solid #D8D8D8;}
+.footer_button.right{right:0;bottom:0;	border-left: 1px solid #D8D8D8;}
+
+.footer_button.disabled:hover{background: #027CBA;cursor: default;}
+
+/*Barcodes styling*/
+.invoice_top_left{float: left;}
+.invoice_top_right img{float: right;}
+.invoice_bottom_left{float: left;}
+.invoice_bottom_right{float: right; margin-bottom: 80px;}
+
+/*Codes Overlay*/
+#problem_codes{display:none;}
+#cause_codes{display:none;}
+#resolution_codes{display:none;}
+
+.codes{
+	position: fixed;
+	list-style-type: none;
+	width: 800px;
+	text-align: left;
+	padding: 0;
+	background: white;
+	border-radius: 10px 10px 0 0;
+}
+#problem_codes{height: 580px;}
+#cause_codes{height: 550px; overflow: hidden;}
+#resolution_codes{height: 470px;}
+
+.overflow{overflow: scroll;height: 530px;}
+
+.codes li{
+	float: left;
+	width: 380px;
+	padding: 10px 0 0 10px;
+	cursor:pointer;
+	font-size: 16px;
+}
+.codes li:hover{
+	background: rgba(255,255,0,.2)	
+}
+
+/* Close Button */
+span.close{
+	display: none;
+	cursor:pointer;
+	position:absolute;
+	right: 10px;
+	top: 0;
+	display: block;
+	padding: 0 0 5px 20px;
+	height: 20px;
+	width: 30px;
+	z-index:1000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+	background: -moz-linear-gradient(
+		top,
+		#d3948d 0%,
+		#963931 50%,
+		#ad4c43);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#d3948d),
+		color-stop(0.50, #963931),
+		to(#ad4c43));
+	border-radius: 0 0 10px 10px;
+	border: 1px solid #000000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,1),
+		0px 1px 0px rgba(255,255,255,0.2);	
+	border-top:none;
+}
+span.close:hover{
+	cursor:pointer;
+	background: -moz-linear-gradient(
+		top,
+		#d3948d 0%,
+		#8f3a31);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#d3948d),
+		to(#8f3a31));
+}
+
+.overlayContainer{
+	position:relative;
+	margin: 0 auto;
+	width: 800px;
+	padding-bottom: 5px;
+	z-index: 30;
+}
+
+.overlayTitle{
+	display:block;
+	background: #7db9e8; /* Old browsers */
+	font-size: 24px;
+	text-shadow: -1px -1px 1px #1E589B;
+	background: #3d719e; /* Old browsers */
+	background: -moz-linear-gradient(top,  #3d719e 53%, #244a6d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(53%,#3d719e), color-stop(100%,#244a6d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #3d719e 53%,#244a6d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #3d719e 53%,#244a6d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #3d719e 53%,#244a6d 100%); /* IE10+ */
+	background: linear-gradient(top,  #3d719e 53%,#244a6d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d719e', endColorstr='#244a6d',GradientType=0 ); /* IE6-9 */
+	padding: 8px 10px;
+	color: white;
+	margin-top: 0;
+	border-radius: 10px 10px 0 0;
+}
+
+/* Overlay Styles */
+#overlay, #partOverlay, #overlay_sig{
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	right: 0; 
+	bottom: 0; 
+	display: none; 
+	background: rgba(0,0,0,.6); 
+	z-index: 20;
+}
+
+/* Parts Overlay */
+#partOverlay h4{font-size: 18px;padding: 5px 0 15px;}
+#partOverlay .formbox label{left: 3px;top: 3px;}
+#partOverlay .formrow.center{width: 570px;margin: 0 auto 12px;}
+
+.partContainer{
+	background: white;
+	position:fixed;
+	margin: 0 auto;
+	width: 790px;
+	z-index: 30;
+	border-radius: 10px 10px 0 0;
+}
+
+.partContent{padding: 5px;}
+.partContent p.left{float: left;padding: 15px 5px 0;}
+.partContent h4{text-align: center;}
+p.closeX{
+	padding: 0;
+	margin: 0;
+	color: inherit;
+	font-size: inherit;
+	font-family:inherit;
+}
+
+/* Add Rows button */
+.moreRows {
+	cursor: pointer;
+	vertical-align: middle;
+	font-size: 14pt;
+	font-family: Helvetica, Arial, sans-serif;
+	color: black;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+	padding: 4px 10px;
+	background: #cccccc;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#cccccc));
+	border-radius: 3px;
+	border: 1px solid #888888;
+	-moz-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5), inset 0px 0px 2px white;
+	float: left;
+	margin: 4px 0 0; }
+
+.moreRows:hover {
+	background: #cfcfcf;
+	background: -moz-linear-gradient(top, white 0%, #e0e0e0);
+	background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e0e0e0)); }
+
+.moreRows:active {
+	background: #a2a2a2;
+	background: -moz-linear-gradient(top, #a2a2a2 0%, #f2f2f2);
+	background: -webkit-gradient(linear, left top, left bottom, from(#a2a2a2), to(#f2f2f2)); }
+
+.submitButton{
+	float: right;
+	font-size: 23px;
+	padding: 6px 8px;
+	cursor: pointer;
+}
+
+a.footer_button{
+	padding-top: 12px;
+	height: 52px;
+}
+
+/* Auto-Save Text */
+.footer_message{
+	width: 500px;
+	margin: 0 auto;
+}
